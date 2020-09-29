@@ -234,3 +234,17 @@
 </body>
 
 </html>
+<!--
+    TIPOS DE METODOS DE LA ETIQUETA "FORM"
+        ~GET = envía los datos en una cadena "visible". Conveniente para enviar pocos datos.
+        ~POST = envía los datos en forma "invisible". Conveniente para enviar una gran cantidad de datos.
+
+    DIFERENCIAS
+
+        ~   .ajax () es el más configurable, donde obtiene un control detallado sobre los encabezados HTTP y demás. También puede obtener acceso directo al objeto XHR utilizando este método. También se proporciona un manejo de errores un poco más detallado. Por lo tanto, puede ser más complicado y, a menudo, innecesario, pero a veces muy útil. Tienes que lidiar con los datos devueltos tú mismo con una devolución de llamada.
+        ~   .get () es solo una abreviatura de $ .ajax () pero abstrae algunas de las configuraciones, estableciendo valores predeterminados razonables para lo que le oculta. Devuelve los datos a una devolución de llamada. Solo permite solicitudes GET, por lo que va acompañado de la función $ .post () para una abstracción similar, solo para POST
+        ~   .load () es similar a $ .get () pero agrega funcionalidad que le permite definir en qué parte del documento se insertarán los datos devueltos. Por lo tanto, solo se puede usar cuando la llamada solo dará como resultado HTML. Se llama de forma ligeramente diferente a las otras llamadas globales, ya que es un método vinculado a un elemento DOM envuelto en jQuery en particular. Por lo tanto, uno haría: $ ('# divWantingContent'). Load (...)
+        ~   .post() su funcionalidad es la de enviar y/o cargar datos de una URL externa (HTML, PHP…) de forma asíncrona (AJAX) mediante el método HTTP POST.
+        Cabe señalar que todos los $ .get (), $ .post (), .load () son solo envoltorios para $ .ajax () como se llama internamente.
+
+-->
